@@ -1,6 +1,7 @@
 import React, { useRef, useCallback, useState } from 'react';
 import { toPng } from 'html-to-image';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/js/bootstrap.min.js";
 function App() {
   const ref = useRef(null);
   const [image, setImage] = useState(null);
@@ -44,8 +45,8 @@ function App() {
           <p className='mx-auto my-3 text-white' style={{ writingMode: 'vertical-lr', textOrientation: 'upright' }}>{textLeft}</p>
         </div>
 
-        <div className='col-6'>
-          {image && <img src={image} className="img-thumbnail" alt="Uploaded" />}
+        <div className='col-6 d-flex justify-content-center align-items-center h-100 '>
+          {image && <img src={image} className="img-thumbnail img-fluid" alt="Uploaded" />}
 
         </div>
         <div className='col-3 '>
